@@ -1,0 +1,52 @@
+
+Características del móvil:
+
+	- Pantalla
+	- Procesador
+	- Memoria
+	- Batería
+	- Cámara Trasera
+	- Cámara Frontal
+
+	Clase Pantalla:
+	
+		- Tamaño (string)
+		- Tipo de cristal (string)
+		- Protección (string)
+		- Resolución (string)
+		- Píxeles (string)
+
+	Clase Procesador:
+
+		- Fabricante (string)
+		- Modelo (string)
+		- Núcleos (int)
+		- Velocidad (string)
+		- GPU (string)
+
+	Clase Memoria:
+
+		- Cantidad Interna (string)
+		- Cantidad Externa (string)
+		- Ampliable (string)
+		
+	Clase Batería:
+
+		- Tipo (string)
+		- Capacidad (string)
+		- Carga Rápida (string)
+
+	Clase Cámara Trasera:
+
+		- Número de lentes (int)
+		- MegaPíxeles (string)
+		- Resolución de vídeo (string)
+		- Flash (string)
+		- Características (string)
+
+	Clase Cámara Frontal:
+	
+		- MegaPíxeles (string)
+		- Características (string)
+		- Resolución de vídeo (string)
+		
