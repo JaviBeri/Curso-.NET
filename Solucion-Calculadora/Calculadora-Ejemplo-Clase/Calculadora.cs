@@ -10,6 +10,7 @@ namespace Calculadora_Ejemplo_Clase
     {
         // Definir campo para almacenar resultado
         private double memoria = 0;
+        private double memoriaCalculadora;
 
         // Definir propiedad para acceder y guardar en la memoria
         public double MemoriaCalculadora
@@ -74,9 +75,27 @@ namespace Calculadora_Ejemplo_Clase
         }
 
         // Método que guarda en memoria o bien un valor pasado como parametro
+        // Metodo que guarda en memoria el resultado de la ultima operacion
+        // o bien  el valor que se le pase como parametro
         public void GuardarEnMemoria(double valor = 0)
+        {// si valor es 0, se guarda el resultado de la ultima operacion
+            if (valor == 0)
+            {
+                MemoriaCalculadora = memoria;
+                MostrarMensajes($"Se ha guardado en memoria el valor: {memoria}");
+            }
+            else
+            {
+                MemoriaCalculadora = valor;
+                MostrarMensajes($"Se ha guardado en memoria el valor: {memoria}");
+            }
+
+        }
+
+        public void GuardarEnMemoria2(double resultado)
         {
-            memoria = valor;
+            memoria = resultado;
+            MostrarMensajes($"Se ha guardado en memoria el valor: {memoria}");
         }
 
         // Método para obtener un valor numérico de la consola

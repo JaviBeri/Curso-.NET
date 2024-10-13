@@ -4,9 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-
-            // Crear las instancias de los empleados
+                       // Crear las instancias de los empleados
 
             Empleado Pedro = new Empleado();
 
