@@ -1,24 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Diagrama de clases de animales">
+    <Position X="0.542" Y="0.5" Height="0.708" Width="1.44" />
+  </Comment>
   <Class Name="Clases_Animales.Animal" Collapsed="true">
-    <Position X="2.75" Y="0.5" Width="1.5" />
+    <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Animal.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Clases_Animales.Perro" Collapsed="true">
-    <Position X="0.5" Y="1.5" Width="1.5" />
+    <Position X="2.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Perro.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Clases_Animales.Gato" Collapsed="true">
-    <Position X="5" Y="1.5" Width="1.5" />
+    <Position X="7" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Gato.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clases_Animales.Retriever" Collapsed="true">
+    <Position X="1" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Retriever.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clases_Animales.Terrier" Collapsed="true">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Terrier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clases_Animales.GatoDoméstico" Collapsed="true">
+    <Position X="5.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GatoDoméstico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clases_Animales.Tigre" Collapsed="true">
+    <Position X="8.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tigre.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
