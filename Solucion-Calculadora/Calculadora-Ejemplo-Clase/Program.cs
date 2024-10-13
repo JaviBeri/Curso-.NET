@@ -18,7 +18,8 @@ while (!salir)
     Console.WriteLine("2. Restar");
     Console.WriteLine("3. Multiplicar");
     Console.WriteLine("4. Dividir");
-    Console.WriteLine("5. Guardar en memoria");
+    Console.WriteLine("5. Resto de la división");
+    Console.WriteLine("6. Guardar en memoria");
     Console.WriteLine("9. Salir");
     Console.WriteLine("Selecciona una opción: ");
     string? opcion = Console.ReadLine();
@@ -27,45 +28,30 @@ while (!salir)
     {
         // Suma de dos números
         case "1":
-            Console.WriteLine("Introduce el primer número: ");
-            double num1 = calculadora.ObtenerNumeroConsola();
-            Console.WriteLine("Introduce el segundo número: ");
-            double num2 = calculadora.ObtenerNumeroConsola(); 
-            double suma = calculadora.Sumar(num1, num2);
-            calculadora.MostrarMensajes($"El resultado de la suma es: {suma}");
+            Sumar(calculadora);
             break;
 
         // Resta de dos números
         case "2":
-            Console.WriteLine("Introduce el primer número: ");
-            double rest1 = calculadora.ObtenerNumeroConsola();
-            Console.WriteLine("Introduce el segundo número: ");
-            double rest2 = calculadora.ObtenerNumeroConsola();
-            double resta = calculadora.Restar(rest1, rest2);
-            calculadora.MostrarMensajes($"El resultado de la resta es: {resta}");
+            Restar(calculadora);
             break;
 
         // Multiplicación de dos números
         case "3":
-            Console.WriteLine("Introduce el primer número: ");
-            double mul1 = calculadora.ObtenerNumeroConsola();
-            Console.WriteLine("Introduce el segundo número: ");
-            double mul2 = calculadora.ObtenerNumeroConsola();
-            double multi = calculadora.Multi(mul1, mul2);
-            calculadora.MostrarMensajes($"El resultado de la resta es: {multi}");
+            Multiplicar(calculadora);
             break;
 
         // División de dos números
         case "4":
-            Console.WriteLine("Introduce el primer número: ");
-            double div1 = calculadora.ObtenerNumeroConsola();
-            Console.WriteLine("Introduce el segundo número: ");
-            double div2 = calculadora.ObtenerNumeroConsola();
-            double divid = calculadora.Dividir(div1, div2);
-            calculadora.MostrarMensajes($"El resultado de la resta es: {divid}");
+            Dividir(calculadora);
             break;
 
+        // Calcular el resto de la división
         case "5":
+            RestoDivision(calculadora);
+            break;
+
+        case "6":
             calculadora.GuardarEnMemoria();
             calculadora.MostrarMensajes($"El valor {calculadora.MemoriaCalculadora} se ha guardado");
             break;
@@ -80,4 +66,54 @@ while (!salir)
             break;
 
     }
+}
+
+static void Sumar(Calculadora calculadora)
+{
+    Console.WriteLine("Introduce el primer número: ");
+    double num1 = calculadora.ObtenerNumeroConsola();
+    Console.WriteLine("Introduce el segundo número: ");
+    double num2 = calculadora.ObtenerNumeroConsola();
+    double suma = calculadora.Sumar(num1, num2);
+    calculadora.MostrarMensajes($"El resultado de la suma es: {suma}");
+}
+
+static void Restar(Calculadora calculadora)
+{
+    double num1, num2;
+    PedirNumeros(calculadora, out num1, out num2);
+    double resta = calculadora.Restar(num1, num2);
+    calculadora.MostrarMensajes($"El resultado de la resta es: {resta}");
+}
+
+static void Multiplicar(Calculadora calculadora)
+{
+    double num1, num2;
+    PedirNumeros(calculadora, out num1, out num2);
+    double multi = calculadora.Multi(num1, num2);
+    calculadora.MostrarMensajes($"El resultado de la resta es: {multi}");
+}
+
+static void Dividir(Calculadora calculadora)
+{
+    double num1, num2;
+    PedirNumeros(calculadora, out num1, out num2);
+    double divid = calculadora.Dividir(num1, num2);
+    calculadora.MostrarMensajes($"El resultado de la resta es: {divid}");
+}
+
+static void RestoDivision(Calculadora calculadora)
+{
+    double num1, num2;
+    PedirNumeros(calculadora, out num1, out num2);
+    double resto = calculadora.Resto(num1, num2);
+    calculadora.MostrarMensajes($"El resultado de la resta es: {resto}");
+}
+
+static void PedirNumeros(Calculadora calculadora, out double num1, out double num2)
+{
+    Console.WriteLine("Introduce el primer número: ");
+    num1 = calculadora.ObtenerNumeroConsola();
+    Console.WriteLine("Introduce el segundo número: ");
+    num2 = calculadora.ObtenerNumeroConsola();
 }

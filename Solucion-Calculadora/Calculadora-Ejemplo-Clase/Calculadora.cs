@@ -46,8 +46,21 @@ namespace Calculadora_Ejemplo_Clase
             return div1 / div2;
         }
 
-        // Método que multiplica dos números
-        public double Multi(double mul1, double mul2)
+        // Método que calcula el resto de la división
+        public double Resto(double resto1, double resto2)
+        {
+            if (resto2 == 0)
+            {
+                MostrarMensajes("No se puede dividir por cero");
+                return 0;
+            }
+            double resultado = resto1 % resto2;
+            memoria = resultado;
+            return resto1 % resto2;
+        }
+
+            // Método que multiplica dos números
+            public double Multi(double mul1, double mul2)
         {
             double resultado = mul1 * mul2;
             memoria = resultado;
