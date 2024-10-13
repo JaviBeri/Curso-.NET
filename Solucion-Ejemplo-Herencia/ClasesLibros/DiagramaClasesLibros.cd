@@ -1,10 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ClasesLibros.Libros">
-    <Position X="3.5" Y="1.75" Width="1.5" />
+    <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAABA=</HashCode>
       <FileName>Libros.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesLibros.Ficcion">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ficcion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesLibros.Ciencia">
+    <Position X="7.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Ciencia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesLibros.Historia">
+    <Position X="5.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Historia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesLibros.NoFiccion">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NoFiccion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesLibros.Popular">
+    <Position X="3" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Popular.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesLibros.Literatura">
+    <Position X="0.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Literatura.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
