@@ -12,6 +12,12 @@ var animales = new List<Animal>
     new Tigre("Tony", 7)
 };
 
+// Mostrar datos de animales con bucle foreach y Console.WriteLine
+foreach (var animal in animales)
+{
+    Console.WriteLine($"Nombre: {animal.Nombre}, Edad: {animal.Edad}");
+}
+
 // Crear una lista de Empleados basados en las clases de puestos
 var empleados = new List<Empleado>
 {
@@ -21,6 +27,12 @@ var empleados = new List<Empleado>
     new SeniorMGMT("Jill", 7)
 };
 
+// Mostrar datos de empleados con bucle foreach y método ToString
+foreach (Empleado empleado in empleados)
+{
+    Console.WriteLine(empleado.ToString() );
+}
+
 // Crear una lista de libros según su temática
 var libros = new List<Libros>
 {
@@ -29,3 +41,9 @@ var libros = new List<Libros>
     new Ciencia("The Guns of August", "Barbara Tuchman", 188),
     new Popular("A Brief History of Time", "Stephen Hanking", 227),
 };
+
+// Mostrar datos de libros con bucle foreach y método DisplayInfo
+foreach (Libros libro in libros)
+{
+    libro.MostrarInfo();
+}

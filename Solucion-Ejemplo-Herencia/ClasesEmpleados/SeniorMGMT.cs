@@ -11,5 +11,10 @@ namespace ClasesEmpleados
         public SeniorMGMT(string nombre, int años) : base(nombre, años)
         {
         }
+
+        public override string ToString()
+        {
+            return $"Senio Management: {Nombre} ({Años} años)";
+        }
     }
 }

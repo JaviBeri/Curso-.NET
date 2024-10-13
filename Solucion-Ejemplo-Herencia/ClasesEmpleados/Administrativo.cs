@@ -11,5 +11,10 @@ namespace ClasesEmpleados
         public Administrativo(string nombre, int años) : base(nombre, años)
         {
         }
+
+        public override string ToString()
+        {
+            return $"Administrativo: {Nombre} ({Años} años)";
+        }
     }
 }
