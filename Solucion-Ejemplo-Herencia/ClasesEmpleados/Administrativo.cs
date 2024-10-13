@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ClasesEmpleados
 {
-    public class Administravito : Worker
+    public class Administrativo : Worker
     {
+        public Administrativo(string nombre, int años) : base(nombre, años)
+        {
+        }
     }
 }

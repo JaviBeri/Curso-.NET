@@ -1,52 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ClasesEmpleados.Empleado" Collapsed="true">
+  <Class Name="ClasesEmpleados.Empleado">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Empleado.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClasesEmpleados.Worker" Collapsed="true">
-    <Position X="1.75" Y="1.75" Width="1.5" />
+  <Class Name="ClasesEmpleados.Worker">
+    <Position X="1.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Worker.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClasesEmpleados.Factory" Collapsed="true">
-    <Position X="0.75" Y="3.25" Width="1.5" />
+  <Class Name="ClasesEmpleados.Factory">
+    <Position X="3" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Factory.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClasesEmpleados.Manager" Collapsed="true">
-    <Position X="6.25" Y="1.75" Width="1.5" />
+  <Class Name="ClasesEmpleados.Manager">
+    <Position X="6.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Manager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClasesEmpleados.MiddleMGMT" Collapsed="true">
-    <Position X="5.25" Y="3.25" Width="1.5" />
+  <Class Name="ClasesEmpleados.MiddleMGMT">
+    <Position X="5.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MiddleMGMT.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClasesEmpleados.SeniorMGMT" Collapsed="true">
-    <Position X="7.5" Y="3.25" Width="1.5" />
+  <Class Name="ClasesEmpleados.SeniorMGMT">
+    <Position X="7.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SeniorMGMT.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ClasesEmpleados.Administravito" Collapsed="true">
-    <Position X="3" Y="3.25" Width="1.5" />
+  <Class Name="ClasesEmpleados.Administrativo">
+    <Position X="0.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Administravito.cs</FileName>
+      <FileName>Administrativo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

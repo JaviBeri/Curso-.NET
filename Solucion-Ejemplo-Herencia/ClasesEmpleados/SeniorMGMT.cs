@@ -8,5 +8,8 @@ namespace ClasesEmpleados
 {
     public class SeniorMGMT : Manager
     {
+        public SeniorMGMT(string nombre, int años) : base(nombre, años)
+        {
+        }
     }
 }
