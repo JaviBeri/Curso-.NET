@@ -1,20 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ClasesEmpleados.ClasesAbstractas;
+using ClasesEmpleados.ClasesAuxiliares;
+using ClasesEmpleados.Interfaces;
 
-namespace ClasesEmpleados
+namespace ClasesEmpleados.ClasesTrabajadores
 {
-    public class Factory : Worker
+    public class Factoria : Trabajador, ITurnos, IFichajes
     {
-        public Factory(string nombre, int años) : base(nombre, años)
+
+        #region IFichajes
+        public List<Fichaje> Fichajes { get; set; }
+        #endregion
+
+        #region ITurnos
+        public string Turno { get; set; }
+        #endregion
+
+        #region Constructores
+        public Factoria(string nombre, int años) : base(nombre, años)
         {
         }
+        #endregion
 
+        #region Sobreescritura de metodos
         public override string ToString()
         {
-            return $"Factory: {Nombre} ({Años} años)";
+            return $"Factoria: {Nombre} ({Años} años)";
         }
+        #endregion
     }
 }

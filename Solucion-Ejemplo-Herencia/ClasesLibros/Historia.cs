@@ -1,17 +1,15 @@
 ﻿namespace ClasesLibros
 {
-    public class Historia : NoFiccion
+    public class History : NonFiction
     {
-
-        public Historia(string titulo, string autor, int paginas)
-            : base(titulo, autor, paginas)
+        public History(string title, string author, int pages)
+            : base(title, author, pages)
         {
         }
 
-        public override void MostrarInfo()
+        public override void DisplayInfo()
         {
-            Console.WriteLine($"Libro de Historia: {Titulo}, de {Autor}, {Paginas} páginas");
+            Console.WriteLine($"History Book: {Title}, by {Author}, {Pages} pages.");
         }
     }
 }
-

@@ -1,52 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ClasesEmpleados.Empleado">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAgAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ABAAAAAAAAgAAAAAAAAAgCAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Empleado.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesEmpleados.Worker">
-    <Position X="1.75" Y="3" Width="1.5" />
+    <Position X="1.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Worker.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesEmpleados.Factory">
-    <Position X="3" Y="5" Width="1.5" />
+    <Position X="2.75" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Factory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesEmpleados.Manager">
-    <Position X="6.25" Y="3" Width="1.5" />
+    <Position X="6" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Manager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesEmpleados.MiddleMGMT">
-    <Position X="5.25" Y="5" Width="1.5" />
+    <Position X="5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MiddleMGMT.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesEmpleados.SeniorMGMT">
-    <Position X="7.5" Y="5" Width="1.5" />
+    <Position X="7.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SeniorMGMT.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesEmpleados.Administrativo">
-    <Position X="0.75" Y="5" Width="1.5" />
+    <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Administrativo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesEmpleados.Externos">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Externos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesEmpleados.ExternoEmpresa">
+    <Position X="9.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExternoEmpresa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesEmpleados.Subcontratas">
+    <Position X="11.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Subcontratas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesEmpleados.Empresa">
+    <Position X="2.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Empresa.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

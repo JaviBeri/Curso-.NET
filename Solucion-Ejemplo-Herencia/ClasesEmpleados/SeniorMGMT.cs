@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ClasesEmpleados.ClasesAbstractas;
+using ClasesEmpleados.Interfaces;
 
-namespace ClasesEmpleados
+namespace ClasesEmpleados.ClasesGestores
 {
-    public class SeniorMGMT : Manager
+    public class JefeProyecto : Gestor, IPlanificacion, IAparcamiento
     {
-        public SeniorMGMT(string nombre, int años) : base(nombre, años)
+        public DateTime ProximaReunion { get; set; }
+        public bool TienePlazaAparcamiento { get; set; }
+        public string PlazaAparcamiento { get; set; }
+
+
+        public JefeProyecto(string nombre, int años) : base(nombre, años)
         {
         }
 
         public override string ToString()
         {
-            return $"Senio Management: {Nombre} ({Años} años)";
+            return $"Senior Management: {Nombre} ({Años} años)";
         }
     }
 }

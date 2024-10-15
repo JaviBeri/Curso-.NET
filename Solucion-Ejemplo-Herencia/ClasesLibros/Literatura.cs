@@ -1,16 +1,17 @@
 ﻿namespace ClasesLibros
 {
-    public class Literatura : Ficcion
+    public class Literature : Fiction
     {
-        public Literatura(string titulo, string autor, int paginas)
-            : base(titulo, autor, paginas)
+        public Literature(string title, string author, int pages)
+            : base(title, author, pages)
         {
         }
 
-        public override void MostrarInfo()
+        public override void DisplayInfo()
         {
-            Console.WriteLine($"Libro de literatura: {Titulo}, de {Autor}, {Paginas} páginas");
+            Console.WriteLine($"Literature Book: {Title}, by {Author}, {Pages} pages.");
         }
     }
 }
+
 

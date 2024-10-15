@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace ClasesLibros
 {
-    public abstract class NoFiccion : Libros
-        
+    public abstract class NonFiction : Book
     {
-
-        public NoFiccion(string titulo, string autor, int paginas)
-            : base(titulo, autor, paginas)
+        public NonFiction(string title, string author, int pages)
+            : base(title, author, pages)
         {
         }
     }
 }
-

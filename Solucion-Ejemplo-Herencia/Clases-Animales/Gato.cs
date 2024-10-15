@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Clases_Animales
+namespace ClasesAnimales
 {
-    public class Gato : Animal
+    public class Cat : Animal
     {
-        public Gato(string nombre, int edad) : base(nombre, edad)
+        public Cat(string nombre, int edad) : base(nombre, edad)
         {
         }
     }

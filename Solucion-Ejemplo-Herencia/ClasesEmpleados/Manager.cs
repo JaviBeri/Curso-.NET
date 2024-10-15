@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClasesEmpleados
+namespace ClasesEmpleados.ClasesAbstractas
 {
-    public class Manager : Empleado
+    public abstract class Gestor : Empleado
     {
-        public Manager(string nombre, int años) : base(nombre, años)
+        public Gestor(string nombre, int años) : base(nombre, años)
         {
         }
     }
 }
+

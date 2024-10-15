@@ -1,16 +1,15 @@
 ﻿namespace ClasesLibros
 {
-    public class Ciencia : NoFiccion 
+    public class Science : NonFiction
     {
-
-        public Ciencia(string titulo, string autor, int paginas)
-            : base(titulo, autor, paginas)
-        { 
+        public Science(string title, string author, int pages)
+            : base(title, author, pages)
+        {
         }
 
-        public override void MostrarInfo()
+        public override void DisplayInfo()
         {
-            Console.WriteLine($"Libro de ciencia {Titulo}, de {Autor}, {Paginas} páginas");
+            Console.WriteLine($"Science Book: {Title}, by {Author}, {Pages} pages.");
         }
     }
 }

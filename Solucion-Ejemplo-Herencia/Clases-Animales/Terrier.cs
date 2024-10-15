@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Clases_Animales
+namespace ClasesAnimales
 {
-    public class Terrier : Perro
+    public class Terrier : Dog
     {
         public Terrier(string nombre, int edad) : base(nombre, edad)
         {

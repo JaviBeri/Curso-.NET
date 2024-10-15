@@ -1,17 +1,15 @@
 ﻿namespace ClasesLibros
 {
-    public class Popular : Ficcion
+    public class Popular : Fiction
     {
-
-        public Popular(string titulo, string autor, int paginas)
-            : base(titulo, autor, paginas)
+        public Popular(string title, string author, int pages)
+            : base(title, author, pages)
         {
         }
 
-        public override void MostrarInfo()
+        public override void DisplayInfo()
         {
-            Console.WriteLine($"Libro Popular de Ficción: {Titulo}, de {Autor}, {Paginas} páginas");
+            Console.WriteLine($"Popular Fiction Book: {Title}, by {Author}, {Pages} pages.");
         }
     }
 }
-

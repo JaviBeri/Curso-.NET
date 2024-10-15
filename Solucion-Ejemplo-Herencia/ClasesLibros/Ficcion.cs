@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace ClasesLibros
 {
-    public abstract class Ficcion : Libros
+    // La clase abstracta Fiction hereda de la clase Book.
+    // Al ser abstracta, no se puede instanciar directamente.
+    public abstract class Fiction : Book
     {
-
-        public Ficcion(string titulo, string autor, int paginas)
-            : base(titulo, autor, paginas)
+        // Constructor de la clase Fiction que recibe el título, el autor y el número de páginas del libro.
+        // Utiliza el constructor de la clase base (Book) para inicializar estos valores.
+        public Fiction(string title, string author, int pages)
+            : base(title, author, pages)
         {
         }
     }

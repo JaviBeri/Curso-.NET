@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ClasesEmpleados.ClasesAbstractas;
+using ClasesEmpleados.Interfaces;
 
-namespace ClasesEmpleados
+namespace ClasesEmpleados.ClasesGestores
 {
-    public class MiddleMGMT : Manager
+    public class Responsable : Gestor, IPlanificacion
     {
-        public MiddleMGMT(string nombre, int años) : base(nombre, años)
+        public DateTime ProximaReunion { get; set; }
+        public Responsable(string nombre, int años) : base(nombre, años)
         {
         }
 
         public override string ToString()
         {
-            return $"Middle Management: {Nombre} ({Años} años)";
+            return $"Responsable: {Nombre} ({Años} años)";
         }
     }
 }

@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="33.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Clases-Animales\Clases-Animales.csproj" />
     <ProjectReference Include="..\ClasesEmpleados\ClasesEmpleados.csproj" />
     <ProjectReference Include="..\ClasesLibros\ClasesLibros.csproj" />

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClasesEmpleados
+namespace ClasesEmpleados.ClasesAbstractas
 {
-    public class Empleado
+    public abstract class Empleado
     {
 
         // Propiedad Nombre
@@ -14,6 +14,16 @@ namespace ClasesEmpleados
 
         // Propiedad Años en la empresa
         public int Años { get; set; }
+
+        public int EmpresaId
+        {
+            set; get;
+        }
+
+        public int Id
+        {
+            get; set;
+        }
 
         // Constructor que recibe el nombre y los años
         public Empleado(string nombre, int años)
