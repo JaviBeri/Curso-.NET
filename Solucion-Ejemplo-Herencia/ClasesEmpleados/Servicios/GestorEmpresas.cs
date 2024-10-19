@@ -1,5 +1,4 @@
-﻿using ClasesEmpleados.ClasesEmpresas;
-using CsvHelper.Configuration;
+﻿using CsvHelper.Configuration;
 using CsvHelper;
 using System;
 using System.Collections.Generic;
@@ -7,7 +6,8 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Formats.Asn1;
+using ClasesEmpleados.ClasesEmpresa;
+
 
 namespace ClasesEmpleados.Servicios
 {
@@ -16,7 +16,7 @@ namespace ClasesEmpleados.Servicios
         // Lista de empresas
         public List<Empresa> empresas = new List<Empresa>();
 
-        private string archivo = @"C:\w\repos\240919-Programacion-Net\Archivos\companies.csv";
+        private string archivo = @"C:\Visual-GitHub\Archivos.csv";
 
 
 

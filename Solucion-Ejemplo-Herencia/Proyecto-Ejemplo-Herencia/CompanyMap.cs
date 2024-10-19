@@ -1,4 +1,4 @@
-﻿using ClasesEmpleados.ClasesEmpresas;
+﻿using ClasesEmpleados.ClasesEmpresa;
 using CsvHelper.Configuration;
 using System;
 using System.Collections.Generic;

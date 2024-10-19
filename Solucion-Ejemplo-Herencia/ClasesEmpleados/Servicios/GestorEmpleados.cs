@@ -1,5 +1,5 @@
 ﻿using ClasesEmpleados.ClasesAbstractas;
-using ClasesEmpleados.ClasesEmpresas;
+using ClasesEmpleados.ClasesEmpresa;
 using ClasesEmpleados.ClasesTrabajadores;
 using System;
 using System.Collections.Generic;

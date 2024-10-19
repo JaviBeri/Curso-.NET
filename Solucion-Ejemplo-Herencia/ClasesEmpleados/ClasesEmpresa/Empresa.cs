@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace ClasesEmpleados.ClasesEmpresas
+namespace ClasesEmpleados.ClasesEmpresa
 {
     public class Empresa
     {

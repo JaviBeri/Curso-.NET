@@ -1,8 +1,6 @@
 ﻿using ClasesEmpleados;
-
-using ClasesEmpleados;
 using ClasesEmpleados.ClasesAbstractas;
-using ClasesEmpleados.ClasesEmpresas;
+using ClasesEmpleados.ClasesEmpresa;
 using ClasesEmpleados.ClasesTrabajadores;
 using ClasesEmpleados.Servicios;
 using CsvHelper;
@@ -23,7 +21,7 @@ namespace EjemploHerenciaProyecto
         private GestorEmpresas _gestorEmpresas = new GestorEmpresas();
         private GestorEmpleados _gestorEmpleados = new GestorEmpleados();
 
-        private string archivo = @"C:\w\repos\240919-Programacion-Net\Archivos\companies.csv";
+        private string archivo = @"C:\Visual-GitHub\Archivos.csv";
 
         public void MostrarMenu()
         {
