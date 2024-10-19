@@ -21,7 +21,7 @@ namespace EjemploHerenciaProyecto
         private GestorEmpresas _gestorEmpresas = new GestorEmpresas();
         private GestorEmpleados _gestorEmpleados = new GestorEmpleados();
 
-        private string archivo = @"C:\Visual-GitHub\Archivos.csv";
+        private string archivo = @"C:\Visual-GitHub\Archivos\Companies.csv";
 
         public void MostrarMenu()
         {

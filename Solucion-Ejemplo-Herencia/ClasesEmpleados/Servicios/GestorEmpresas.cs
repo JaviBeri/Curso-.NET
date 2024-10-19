@@ -16,7 +16,7 @@ namespace ClasesEmpleados.Servicios
         // Lista de empresas
         public List<Empresa> empresas = new List<Empresa>();
 
-        private string archivo = @"C:\Visual-GitHub\Archivos.csv";
+        private string archivo = @"C:\Visual-GitHub\Archivos\Companies.csv";
 
 
 
