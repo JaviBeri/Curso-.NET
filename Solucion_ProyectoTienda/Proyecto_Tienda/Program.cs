@@ -1,9 +1,39 @@
+using Proyecto_Tienda.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+#region Servicios
+//      =========
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Configurar servicios dependiendo del entorno
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddScoped<IEmailService, FakeEmailService>();
+}
+else
+{
+    builder.Services.AddScoped<IEmailService, RealEmailService>();
+}
+
+builder.Services.AddScoped<IMonedaRepositorio, MonedaRepositorioEnMemoria>();
+// Repositorio generico de productos
+builder.Services.AddScoped<IRepository<Producto>, ProductoRepositorioEnMemoria>();
+
+#endregion
+
 var app = builder.Build();
+
+#region Middleware
+//      ==========
+
+// Añadir el middleware personalizado al pipeline
+app.UseMiddleware<KestrelMiddleware>();
+
+// Agregar nuestro middleware personalizado al pipeline
+app.UseMiddleware<RequestTimingMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -23,5 +53,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+#endregion
 
 app.Run();

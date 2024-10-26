@@ -1,32 +1,37 @@
 using Microsoft.AspNetCore.Mvc;
 using Proyecto_Tienda.Models;
+using Proyecto_Tienda.Services;
 using System.Diagnostics;
 
-namespace Proyecto_Tienda.Controllers
+namespace Proyecto_Tienda.Controllers;
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    private readonly ILogger<HomeController> _logger;
+    private readonly IEmailService _emailService;
+
+    public HomeController(ILogger<HomeController> logger, IEmailService emailService)
     {
-        private readonly ILogger<HomeController> _logger;
+        _logger = logger;
+        _emailService = emailService;
+    }
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+    public IActionResult Index()
+    {
+        return View();
+    }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+    public IActionResult Privacy()
+    {
+        ViewBag.Message = "¡Gracias por tu interés en nuestra tienda!";
+        ViewBag.Fecha = DateTime.Now;
+        ViewBag.Email = "pedidos@mail.com";
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        return View();
+    }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error()
+    {
+        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
