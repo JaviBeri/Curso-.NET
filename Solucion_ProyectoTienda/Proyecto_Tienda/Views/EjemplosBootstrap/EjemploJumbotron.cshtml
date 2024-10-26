@@ -1,0 +1,156 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@section HeadStyles {
+    <style>
+        <style >
+        /*
+               Estilos corporativos con superposición colorida
+               Se han aplicado diferentes estilos para darle un toque elegante, colorido y corporativo al componente jumbotron, con un fondo degradado
+               y difuminado, y textos resaltados en color blanco.
+            */
+        .jumbotron {
+            background-image: url('/images/service-analytics.jpeg'); /* Imagen de fondo que se utiliza para el jumbotron. */
+            background-repeat: no-repeat; /* Se asegura que la imagen de fondo no se repita. */
+            background-size: cover; /* La imagen de fondo se ajusta para cubrir todo el jumbotron. */
+            background-position: center top; /* La imagen se posiciona en el centro superior del jumbotron. */
+            position: relative; /* Se define como relativa para que los elementos dentro del jumbotron se posicionen correctamente. */
+            padding: 5rem 3rem; /* Añade relleno interno (padding) para crear espacio alrededor del contenido dentro del jumbotron. */
+            margin-bottom: 2rem; /* Añade un margen en la parte inferior del jumbotron, creando espacio entre elementos verticales. */
+            border-radius: 10px; /* Los bordes del jumbotron se redondean ligeramente para un aspecto más moderno y elegante. */
+            color: #ffffff; /* El color de los textos dentro del jumbotron se define como blanco para resaltar sobre el fondo. */
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Aplica una sombra suave alrededor del jumbotron para darle profundidad y realzar el componente. */
+        }
+
+        /*
+               Pseudo-elemento ::before para añadir una capa sobre la imagen de fondo, que contiene el filtro de desenfoque (blur)
+               y el degradado de colores para resaltar el texto sobre la imagen de fondo.
+            */
+        .jumbotron::before {
+            content: ""; /* Inserta un contenido vacío, utilizado solo para estilo visual. */
+            position: absolute; /* Posiciona el pseudo-elemento de manera absoluta para que ocupe toda la superficie del jumbotron. */
+            top: 0;
+            left: 0;
+            width: 100%; /* Cubre el 100% del ancho del jumbotron. */
+            height: 100%; /* Cubre el 100% de la altura del jumbotron. */
+            backdrop-filter: blur(6px); /* Aplica un efecto de difuminado (blur) a la imagen de fondo, lo que suaviza la imagen para dar mayor enfoque al texto. */
+            background: linear-gradient(135deg, rgba(255, 120, 120, 0.6), rgba(120, 120, 255, 0.6)); /* Aplica un degradado colorido para crear un efecto vibrante sobre el fondo. */
+            border-radius: 10px; /* Aplica bordes redondeados al pseudo-elemento para alinearse con el borde del jumbotron. */
+        }
+
+        /*
+               Estilos para el título principal del jumbotron (h1). Se enfoca en hacerlo más grande, visible y estilizado con sombras para mejorar su legibilidad.
+            */
+        .jumbotron h1 {
+            font-size: 3rem; /* Tamaño de fuente grande para el encabezado principal, haciéndolo prominente. */
+            font-weight: 700; /* Grosor del texto ajustado a 700, que es el equivalente a "bold", para hacerlo más fuerte visualmente. */
+            color: #f8f9fa; /* Color blanco suave para el texto. */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Aplica una sombra en el texto para mejorar el contraste y la legibilidad sobre el fondo. */
+            position: relative; /* Mantiene el posicionamiento relativo para asegurar que el texto esté por encima del pseudo-elemento ::before. */
+            z-index: 1; /* Asegura que el texto esté en un nivel superior al de la capa de fondo difuminado (pseudo-elemento ::before). */
+        }
+
+        /*
+               Estilos para los párrafos dentro del jumbotron. Se ajusta la fuente para que sea más ligera y elegante, con sombras para mejorar la legibilidad.
+            */
+        .jumbotron p {
+            font-size: 1.25rem; /* Tamaño de fuente más pequeño que el encabezado, pero suficientemente grande para su visibilidad. */
+            font-weight: 300; /* Grosor más ligero para los párrafos, lo que añade un estilo más suave y menos agresivo. */
+            color: rgba(255, 255, 255, 0.9); /* Color blanco con una opacidad del 90%, lo que le da un ligero tono traslúcido. */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra ligera en el texto del párrafo para garantizar que se vea claramente sobre el fondo. */
+            position: relative; /* Posición relativa para asegurar que el texto esté por encima de la capa de fondo. */
+            z-index: 1; /* Asegura que los párrafos se coloquen en un nivel superior al del pseudo-elemento ::before. */
+        }
+
+        /*
+               Estilos aplicados al contenedor principal (container) que contiene el jumbotron. Limita el ancho para que el contenido no se extienda demasiado y mantenga un aspecto limpio.
+            */
+        .container {
+            max-width: 1100px; /* El ancho máximo del contenedor se ajusta a 1100px para controlar el espacio y mantener un diseño limpio. */
+        }
+
+        /*
+               Estilos para el botón primario utilizado en el jumbotron. Se define un color de fondo corporativo con interacciones de hover.
+            */
+        .btn-primary {
+            background-color: #007bff; /* Color de fondo azul corporativo para el botón. */
+            border-color: #007bff; /* El borde del botón también se define con el color azul corporativo. */
+            padding: 0.75rem 1.5rem; /* Añade un relleno interno más amplio, lo que hace que el botón sea más grande y fácil de hacer clic. */
+            font-size: 1.125rem; /* Tamaño de fuente ligeramente más grande para mejorar la legibilidad y presencia del botón. */
+            font-weight: 500; /* Grosor del texto dentro del botón para hacerlo más visible. */
+        }
+
+            /*
+               Estilos para el estado hover del botón primario. Se oscurece el botón cuando el usuario pasa el cursor por encima para proporcionar interactividad visual.
+            */
+            .btn-primary:hover {
+                background-color: #0056b3; /* Color de fondo más oscuro cuando el botón está en estado hover. */
+                border-color: #0056b3; /* El borde también cambia a un tono más oscuro en estado hover. */
+            }
+
+    </style>
+
+
+        </style>
+}
+
+<!-- Jumbotron Corporativo con superposición colorida -->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Lanzamiento de la Nueva Solución Empresarial</h1>
+        <p class="lead">Potencia tu negocio con nuestras nuevas herramientas para la gestión empresarial eficiente.</p>
+    </div>
+</div>
+
+<!-- Contenedor con otros jumbotrons -->
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Innovación en Tecnología Empresarial</h1>
+            <p class="lead">Nuestras soluciones tecnológicas están diseñadas para optimizar tus operaciones y aumentar la productividad.</p>
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Impulsa tu Crecimiento Empresarial</h1>
+        <p class="lead">Descubre nuestras herramientas que facilitan la toma de decisiones basada en datos y análisis predictivo.</p>
+        <hr class="my-4">
+        <p>Con nuestras nuevas soluciones de software, podrás automatizar procesos y mejorar la eficiencia de tu negocio, desde la gestión de recursos humanos hasta el análisis financiero avanzado.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Conoce más</a>
+    </div>
+
+    <!-- Card explicativa al final -->
+    <div class="row mt-5 mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm w-100">
+                <div class="card-header bg-light text-dark">
+                    Explicación de los Estilos Aplicados y el Jumbotron Corporativo
+                </div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">Estilo Corporativo y Efectos Visuales</h5>
+                    <p class="card-text">
+                        En esta página, se han aplicado varios efectos visuales con el objetivo de dar un toque más colorido y moderno. Se utilizó un degradado en el fondo con una combinación de colores cálidos y fríos para resaltar el contenido textual.
+                    </p>
+
+                    <h6>Superposición colorida con degradado:</h6>
+                    <p>
+                        Se utilizó un degradado con `linear-gradient(135deg, rgba(255, 120, 120, 0.6), rgba(120, 120, 255, 0.6));` que aplica una capa colorida sobre la imagen de fondo. Este degradado crea un contraste artístico pero mantiene la profesionalidad.
+                    </p>
+
+                    <h6>Filtro de **blur** para difuminar el fondo:</h6>
+                    <p>
+                        Se aplicó `backdrop-filter: blur(6px);` para difuminar ligeramente el fondo, permitiendo que el texto y los elementos interactivos resalten sin distraer con demasiados detalles del fondo.
+                    </p>
+
+                    <h6>Sombras en el texto:</h6>
+                    <p>
+                        Se añadieron sombras sutiles al texto para mejorar la legibilidad, creando un equilibrio entre el fondo colorido y el contenido textual.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end card -->
+</div>

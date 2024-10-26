@@ -20,7 +20,19 @@ else
 
 builder.Services.AddScoped<IMonedaRepositorio, MonedaRepositorioEnMemoria>();
 // Repositorio generico de productos
-builder.Services.AddScoped<IRepository<Producto>, ProductoRepositorioEnMemoria>();
+builder.Services.AddScoped<IRepository<Producto>, ProductoRepositorioEnMemoriaGenerico>();
+
+// Servicio transitorio
+builder.Services.AddTransient<ServicioTransitorio>();
+
+// Servicio Singleton
+builder.Services.AddSingleton<ServicioSingleton>();
+
+// Servicio Scoped
+builder.Services.AddScoped<ServicioScoped>();
+
+// Servicio IProductoRepositorio
+builder.Services.AddScoped<IProductoRepositorio, ProductoRepositorioEnMemoria>();
 
 #endregion
 

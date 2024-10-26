@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Empleado>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Lista de Empleados - Filtrar empleados con sueldo mayor a 3000</h2>
+
+    <!-- Tabla de empleados -->
+    <table class="table table-bordered table-hover table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Sueldo</th>
+                <th scope="col">Departamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (!Model.Any())
+            {
+                <tr>
+                    <td colspan="5" class="text-center">No hay empleados disponibles</td>
+                </tr>
+            }
+            else
+            {
+                @foreach (var empleado in Model)
+                {
+                    <tr>
+                        <td>@empleado.Nombre</td>
+                        <td>@empleado.Apellido</td>
+                        <td>@empleado.Edad</td>
+                        <td>@empleado.Sueldo.ToString("C")</td> <!-- Formateamos el sueldo como moneda -->
+                        <td>@empleado.Departamento</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+    <!-- Botón para volver -->
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Volver al Inicio</a>
+    </div>
+</div>

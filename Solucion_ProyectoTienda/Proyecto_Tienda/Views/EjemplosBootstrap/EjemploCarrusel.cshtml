@@ -1,0 +1,151 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@section HeadStyles {
+    <style>
+        /* Estilo para el carrusel corporativo */
+        .carousel-item {
+            height: 75vh; /* Ajusta la altura del carrusel */
+            min-height: 300px; /* Altura mínima para pantallas pequeñas */
+            background: no-repeat center center scroll;
+            background-size: cover; /* Asegura que la imagen cubra todo el espacio disponible */
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para el texto */
+            padding: 1.5rem;
+            border-radius: 10px; /* Bordes redondeados para un aspecto elegante */
+        }
+
+            .carousel-caption h5 {
+                font-size: 2rem; /* Tamaño de texto adecuado para el encabezado */
+                font-weight: 700; /* Grosor del texto */
+            }
+
+            .carousel-caption p {
+                font-size: 1.25rem; /* Tamaño de texto adecuado para el párrafo */
+            }
+
+        .carousel-indicators button {
+            background-color: #007bff; /* Indicadores del carrusel en azul corporativo */
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #007bff; /* Íconos de navegación en azul corporativo */
+            border-radius: 50%; /* Bordes redondeados */
+        }
+    </style>
+}
+
+<div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicadores del carrusel -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+
+    <!-- Elementos del carrusel -->
+    <div class="carousel-inner">
+        <!-- Primer slide -->
+        <div class="carousel-item active" style="background-image: url('/images/header-corporate02.jpeg');">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Soluciones Empresariales de Alto Impacto</h5>
+                <p>Innovamos para llevar tu empresa al siguiente nivel de eficiencia y productividad.</p>
+            </div>
+        </div>
+
+        <!-- Segundo slide -->
+        <div class="carousel-item" style="background-image: url('/images/header-corporate03.jpeg');">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Consultoría Estratégica</h5>
+                <p>Nuestros expertos trabajan contigo para desarrollar estrategias que impulsen el crecimiento de tu negocio.</p>
+            </div>
+        </div>
+
+        <!-- Tercer slide -->
+        <div class="carousel-item" style="background-image: url('/images/service-consulting.jpeg');">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Optimización de Procesos Empresariales</h5>
+                <p>Automatizamos y mejoramos tus procesos para maximizar la eficiencia operativa.</p>
+            </div>
+        </div>
+
+        <!-- Cuarto slide -->
+        <div class="carousel-item" style="background-image: url('/images/service-cybersecurity.webp');">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Ciberseguridad para Empresas</h5>
+                <p>Protegemos los activos digitales de tu empresa con soluciones avanzadas de ciberseguridad.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controles de navegación prev y next -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>
+
+<!-- Card explicativa al final -->
+<div class="row mt-5 mb-5">
+    <div class="col-12">
+        <div class="card shadow-sm w-100">
+            <div class="card-header bg-light text-dark">
+                Explicación del Carrusel Corporativo en Bootstrap
+            </div>
+            <div class="card-body text-dark">
+                <h5 class="card-title">Implementación y Personalización del Carrusel</h5>
+                <p class="card-text">
+                    El carrusel de Bootstrap es un componente altamente interactivo que permite mostrar imágenes, textos o cualquier contenido de forma dinámica. Es útil para destacar productos, servicios o cualquier otro tipo de información en formato de diapositivas.
+                </p>
+
+                <h6>Configuración básica del carrusel:</h6>
+                <p>
+                    El carrusel se basa en la estructura de <code>.carousel-inner</code> para contener las diapositivas y los controles de navegación como <code>.carousel-control-prev</code> y <code>.carousel-control-next</code>. Además, se añaden indicadores de navegación (<code>.carousel-indicators</code>) que permiten al usuario cambiar entre las diferentes diapositivas.
+                </p>
+
+                <h6>Personalización corporativa aplicada:</h6>
+                <p>
+                    1. **Imágenes**: Las imágenes utilizadas en el carrusel corresponden a temas empresariales como consultoría, ciberseguridad, y procesos corporativos. Estas se adaptan al tamaño del contenedor mediante `background-size: cover` para que se visualicen correctamente en cualquier pantalla.
+                </p>
+                <p>
+                    2. **Altura y ajuste del carrusel**: El carrusel se ha ajustado para ocupar el 75% de la altura de la pantalla (`75vh`), con una altura mínima de `300px` para asegurar que se vea bien incluso en dispositivos móviles. Las imágenes de fondo están centradas (`background-position: center top`) y no se repiten (`background-repeat: no-repeat`).
+                </p>
+                <p>
+                    3. **Texto sobre imágenes**: Para asegurar la legibilidad del texto sobre las imágenes de fondo, se aplicó un fondo semitransparente a la sección de los subtítulos (`carousel-caption`), con un color de fondo `rgba(0, 0, 0, 0.5)`. Esto permite que el texto blanco resalte sin ocultar completamente la imagen de fondo.
+                </p>
+
+                <h6>Estilo de navegación:</h6>
+                <p>
+                    Los controles de navegación (<code>prev</code> y <code>next</code>) se han personalizado con un fondo azul corporativo (`#007bff`), asegurando un aspecto visual acorde al diseño general. Además, los indicadores del carrusel también están estilizados en azul, alineando toda la experiencia visual a una estética corporativa.
+                </p>
+
+                <h6>Indicadores:</h6>
+                <p>
+                    Los indicadores del carrusel son puntos que permiten navegar entre las diapositivas. En este caso, se personalizaron con el color azul corporativo (`#007bff`) para dar consistencia visual con los demás elementos del carrusel.
+                </p>
+
+                <h6>Uso de las clases de Bootstrap:</h6>
+                <p>
+                    - <code>.carousel-inner</code>: Contiene las diapositivas.
+                    - <code>.carousel-item</code>: Define cada una de las diapositivas.
+                    - <code>.carousel-caption</code>: Texto y descripción que se muestra sobre cada diapositiva.
+                    - <code>.carousel-control-prev</code> y <code>.carousel-control-next</code>: Botones de navegación para cambiar entre diapositivas.
+                </p>
+
+                <a href="https://getbootstrap.com/docs/5.0/components/carousel/" class="btn btn-primary">Leer más sobre Carrusel en Bootstrap 5</a>
+            </div>
+        </div>
+    </div>
+</div>

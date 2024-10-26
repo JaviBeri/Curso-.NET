@@ -1,8 +1,336 @@
-﻿@{
+﻿@model HomeIndexViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@section HeadStyles {
+    <style>
+        /* Animación de deslizamiento y opacidad del menú */
+        .animated-list {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards ease-in-out;
+        }
+
+        /* Icono FontAwesome animado */
+        .icono-animado {
+            transition: transform 0.5s ease, color 0.5s ease;
+            color: #6c757d; /* Color inicial del icono */
+            font-size: 1.5rem; /* Tamaño del icono */
+        }
+
+        /* Efecto al pasar el ratón sobre el enlace */
+        .animated-item {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+            /* Cambio de color y movimiento del enlace y el icono al pasar el ratón */
+            .animated-item:hover {
+                color: #0d6efd !important;
+                transform: translateX(15px); /* Movimiento hacia la derecha */
+            }
+
+                /* Movimiento y cambio de color del ícono al pasar el ratón */
+                .animated-item:hover .icono-animado {
+                    color: #0d6efd; /* Cambia el color del icono al azul */
+                    transform: rotate(360deg); /* Rotación completa del icono */
+                }
+
+        /* Animación de aparición con deslizamiento hacia arriba */
+        @@keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+}
+
+
+@Model.Opciones.Count
+
+
+
+
+<!-- Encabezado del menú -->
+<h2 class="text-center my-4">Opciones Interactivas</h2>
+
+<!-- Menú interactivo con animaciones -->
+<div class="container">
+    <ul class="navbar-nav bg-light rounded p-3 animated-list">
+        @foreach (var opcion in Model.Opciones)
+        {
+            <li class="nav-item mb-2">
+                <a class="nav-link text-primary fw-bold animated-item d-flex align-items-center" asp-area="" asp-controller="@opcion.NombreControlador" asp-action="@opcion.NombreAccion">
+                    <!-- Icono FontAwesome para cada opción -->
+                    <i class="fas fa-star me-3 icono-animado"></i> <!-- Puedes cambiar el ícono aquí -->
+                    @opcion.TextoOpcion
+                </a>
+            </li>
+        }
+    </ul>
 </div>
+
+<hr />
+
+
+
+
+
+
+@* <ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemploLinq" asp-action="EjemploNiveles">Ejemplo Niveles</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemploLinq" asp-action="EjemploNivelesSeisLetras">Ejemplo Niveles mas de n Letras</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemploLinq" asp-action="FiltrarProductos">Ejemplo Filtrar Productos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemploLinq" asp-action="FiltrarProductosBogus">Ejemplo Filtrar Productos (Bogus)</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemploLinq" asp-action="EjemploEmpleados">Ejemplo Empleados 1</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemploLinq" asp-action="EjemploEmpleados2">Ejemplo Empleados 2</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemploLinq" asp-action="EjemploEmpleadosSubConsulta">Ejemplo Empleados SubConsulta</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemploLinq" asp-action="EjemploEmpleadosOperadoresReverse">Ejemplo Reverse</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemploLinq" asp-action="EjemploEmpleadosOperadoresSkipTakeWhileReverse">Ejemplo Skip TakeWhile Reverse</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosServicioTransitorio" asp-action="Index">Ejemplo AddTransient</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemploServicioSingleton" asp-action="Index">Ejemplo AddSingleton</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemploServicioScoped" asp-action="Index">Ejemplo AddScoped</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="ProductosEjemplo" asp-action="Index">Ejemplo Controller y Vista Productos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Animaciones" asp-action="Index">Ejemplo Animaciones</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="BackgroundColors">Colores de fondo</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="ContainersRows">Contenedores y filas</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="MediaBreakpoints">Media Breakpoints</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="GridSystem">Grid System</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="NavegacionBase">Navegacion Base</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="NavegacionEjemplo">Navegacion Ejemplo</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="EtiquetasEncabezado">Etiquetas de Encabezado</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="ColoresTexto">Colores de Texto</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="ParrafosCitas">Parrafos y Citas</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="ElementosEnLinea">Elementos En Linea</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="Listas">Listas</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="Flotante">Flotante</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="FijosJustificados">Fijos y Justificados</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="Botones">Botones</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="Imagenes">Imagenes</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="ImagenesFigure">Imagenes en Figure</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="EjmploFontAwesome">Ejmplo FontAwesome</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="EjmploTarjetas">Ejmplo Tarjetas</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="EjemplosBootstrap" asp-action="EjmploTarjetasDinamico">Ejmplo Tarjetas Dinamico</a>
+    </li>
+
+</ul> *@
+
+<!-- Galería de botones -->
+@* <div class="container mt-4">
+    <div class="row">
+        <!-- Botón 1 -->
+        <div class="col-md-4 mb-3">
+            <a class="btn btn-primary btn-block" asp-area="" asp-controller="EjemploLinq" asp-action="EjemploNiveles">Ejemplo Niveles</a>
+        </div>
+        <!-- Botón 2 -->
+        <div class="col-md-4 mb-3">
+            <a class="btn btn-primary btn-block" asp-area="" asp-controller="EjemploLinq" asp-action="EjemploNivelesSeisLetras">Ejemplo Niveles más de n Letras</a>
+        </div>
+        <!-- Botón 3 -->
+        <div class="col-md-4 mb-3">
+            <a class="btn btn-primary btn-block" asp-area="" asp-controller="EjemploLinq" asp-action="FiltrarProductos">Ejemplo Filtrar Productos</a>
+        </div>
+        <!-- Botón 4 -->
+        <div class="col-md-4 mb-3">
+            <a class="btn btn-primary btn-block" asp-area="" asp-controller="EjemploLinq" asp-action="FiltrarProductosBogus">Ejemplo Filtrar Productos (Bogus)</a>
+        </div>
+        <!-- Botón 5 -->
+        <div class="col-md-4 mb-3">
+            <a class="btn btn-primary btn-block" asp-area="" asp-controller="EjemploLinq" asp-action="EjemploEmpleados">Ejemplo Empleados 1</a>
+        </div>
+        <!-- Botón 6 -->
+        <div class="col-md-4 mb-3">
+            <a class="btn btn-primary btn-block" asp-area="" asp-controller="EjemploLinq" asp-action="EjemploEmpleados2">Ejemplo Empleados 2</a>
+        </div>
+        <!-- Botón 7 -->
+        <div class="col-md-4 mb-3">
+            <a class="btn btn-primary btn-block" asp-area="" asp-controller="EjemploLinq" asp-action="EjemploEmpleadosSubConsulta">Ejemplo Empleados SubConsulta</a>
+        </div>
+        <!-- Botón 8 -->
+        <div class="col-md-4 mb-3">
+            <a class="btn btn-primary btn-block" asp-area="" asp-controller="EjemploLinq" asp-action="EjemploEmpleadosOperadoresReverse">Ejemplo Reverse</a>
+        </div>
+        <!-- Botón 9 -->
+        <div class="col-md-4 mb-3">
+            <a class="btn btn-primary btn-block" asp-area="" asp-controller="EjemploLinq" asp-action="EjemploEmpleadosOperadoresSkipTakeWhileReverse">Ejemplo Skip TakeWhile Reverse</a>
+        </div>
+        <!-- Botón 10 -->
+        <div class="col-md-4 mb-3">
+            <a class="btn btn-primary btn-block" asp-area="" asp-controller="EjemplosServicioTransitorio" asp-action="Index">Ejemplo AddTransient</a>
+        </div>
+        <!-- Botón 11 -->
+        <div class="col-md-4 mb-3">
+            <a class="btn btn-primary btn-block" asp-area="" asp-controller="EjemploServicioSingleton" asp-action="Index">Ejemplo AddSingleton</a>
+        </div>
+        <!-- Botón 12 -->
+        <div class="col-md-4 mb-3">
+            <a class="btn btn-primary btn-block" asp-area="" asp-controller="EjemploServicioScoped" asp-action="Index">Ejemplo AddScoped</a>
+        </div>
+        <!-- Puedes seguir añadiendo más botones aquí en otras columnas -->
+    </div>
+</div> *@
+
+
+<div class="container mt-5">
+    <div class="row text-center">
+        <!-- Icono 1 -->
+        <div class="col-3 col-md-2 mb-4">
+            <div class="card border-0">
+                <div class="card-body">
+                    <i class="fas fa-chalkboard-teacher fa-3x text-primary"></i>
+                    <p class="mt-2">Presentaciones</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Icono 2 -->
+        <div class="col-3 col-md-2 mb-4">
+            <div class="card border-0">
+                <div class="card-body">
+                    <i class="fab fa-linkedin fa-3x text-info"></i>
+                    <p class="mt-2">LinkedIn</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Icono 3 -->
+        <div class="col-3 col-md-2 mb-4">
+            <div class="card border-0">
+                <div class="card-body">
+                    <i class="fas fa-tv fa-3x text-danger"></i>
+                    <p class="mt-2">Películas y TV</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Icono 4 -->
+        <div class="col-3 col-md-2 mb-4">
+            <div class="card border-0">
+                <div class="card-body">
+                    <i class="fab fa-whatsapp fa-3x text-success"></i>
+                    <p class="mt-2">WhatsApp</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Icono 5 -->
+        <div class="col-3 col-md-2 mb-4">
+            <div class="card border-0">
+                <div class="card-body">
+                    <i class="fab fa-aws fa-3x text-warning"></i>
+                    <p class="mt-2">Amazon.es</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Icono 6 -->
+        <div class="col-3 col-md-2 mb-4">
+            <div class="card border-0">
+                <div class="card-body">
+                    <i class="fas fa-calendar-alt fa-3x text-info"></i>
+                    <p class="mt-2">Calendario</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agrega más iconos en el mismo formato -->
+    </div>
+</div>
+
+
+
+@section Header {
+    <h3>Header de la pagina</h3>
+}
+
+@section Scripts {
+
+    <script src="~/lib/font-awesome/js/fontawesome.min.js"></script>
+}

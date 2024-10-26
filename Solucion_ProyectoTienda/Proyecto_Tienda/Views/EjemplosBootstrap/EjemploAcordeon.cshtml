@@ -1,0 +1,159 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@section HeadStyles {
+    <style>
+        /* Estilos corporativos */
+        .accordion-button {
+            background-color: #00509e; /* Azul corporativo */
+            color: #ffffff;
+            font-weight: 600;
+            text-align: left;
+            padding: 1rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 0.25rem;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .accordion-button:hover {
+                background-color: #003f7d; /* Azul más oscuro */
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave en hover */
+            }
+
+            .accordion-button:not(.collapsed) {
+                background-color: #003f7d; /* Color activo cuando está expandido */
+                color: #ffffff;
+                box-shadow: inset 0px -2px 5px rgba(0, 0, 0, 0.15);
+            }
+
+        .accordion-body {
+            background-color: #f3f4f6; /* Fondo gris claro */
+            color: #333;
+            padding: 1.5rem;
+            border-radius: 0 0 0.25rem 0.25rem;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Sombra ligera */
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .accordion {
+            max-width: 800px; /* Limita el ancho del acordeón */
+            margin: 2rem auto; /* Centra el acordeón en la página */
+            border-radius: 0.25rem; /* Bordes redondeados */
+        }
+
+        /* Ajuste de color para los encabezados de los botones */
+        .accordion-header {
+            border: none;
+        }
+
+        .card-explanation {
+            background-color: #f8f9fa;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+            border: none;
+            border-radius: 10px;
+        }
+
+            .card-explanation .card-header {
+                background-color: #004085;
+                color: #ffffff;
+                font-weight: bold;
+            }
+
+            .card-explanation .card-body {
+                font-size: 1rem;
+                color: #333;
+            }
+
+    </style>
+}
+
+<div class="container mt-5">
+    <div class="accordion" id="accordionExample">
+
+        <!-- Primer Panel del Acordeón -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Estrategia de Decisiones Informadas
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    La toma de decisiones fundamentada es clave en el entorno corporativo. Evaluar la viabilidad de cada acción y sus posibles riesgos asegura una gestión más eficaz y resultados sostenibles. <br><em>&mdash; Estrategia Corporativa</em>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segundo Panel del Acordeón -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Optimización de Procesos Internos
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    La eficiencia operativa se alcanza a través de la optimización de procesos internos. Al ajustar los procedimientos y reducir redundancias, promovemos un ambiente de trabajo ágil y productivo, maximizando el retorno de inversión. <br><em>&mdash; Mejora Continua</em>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tercer Panel del Acordeón -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Liderazgo y Cultura Organizacional
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Fomentar un liderazgo sólido y una cultura organizacional comprometida son los cimientos de un entorno corporativo exitoso. Estos factores impulsan el compromiso de los empleados y crean un clima propicio para la innovación y el crecimiento. <br><em>&mdash; Cultura Corporativa</em>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card explicativa al final -->
+    <div class="row mt-5 mb-5">
+        <div class="col-12">
+            <div class="card card-explanation w-100">
+                <div class="card-header">
+                    Explicación del Acordeón y Estilos Aplicados
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Detalles de Implementación</h5>
+                    <p class="card-text">
+                        Este acordeón utiliza componentes de Bootstrap 5, adaptados con un estilo corporativo para reflejar una estética profesional y moderna. A continuación, se explica cada parte en detalle:
+                    </p>
+
+                    <h6>Botones de Acordeón</h6>
+                    <p>
+                        Cada botón de acordeón emplea la clase <code>.accordion-button</code> de Bootstrap, que se personalizó para incluir un fondo azul corporativo (#00509e). Al pasar el cursor, el fondo se oscurece y aparece una sombra suave para indicar interactividad.
+                    </p>
+
+                    <h6>Cuerpos de Acordeón</h6>
+                    <p>
+                        Los cuerpos del acordeón utilizan <code>.accordion-body</code> con un fondo gris claro (#f3f4f6) y una sombra ligera para dar una sensación de profundidad. Este estilo de fondo neutro asegura que el contenido sea legible y profesional.
+                    </p>
+
+                    <h6>Estructura General</h6>
+                    <p>
+                        El acordeón se centra en la página con un ancho máximo de 800px, manteniendo una estética centrada y adecuada para la lectura. Cada panel del acordeón tiene un borde redondeado para suavizar el aspecto y alinear el diseño con el estilo corporativo.
+                    </p>
+
+                    <h6>Transiciones y Efectos</h6>
+                    <p>
+                        Los efectos de transición aplicados a los botones y cuerpos del acordeón permiten una experiencia visual suave, lo que agrega un toque elegante y minimiza distracciones en el usuario. Esto se logra usando <code>transition</code> para suavizar los cambios de color y sombra.
+                    </p>
+
+                    <a href="https://getbootstrap.com/docs/5.0/components/accordion/" class="btn btn-primary mt-3">Leer más sobre el Acordeón en Bootstrap 5</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,97 @@
+﻿@*
+    Para más información sobre cómo habilitar MVC para proyectos vacíos, visita https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@section HeadStyles {
+    <style>
+        /*
+                            Clase: myDiv
+                            Descripción: Esta clase estiliza un div para que tenga un ancho completo,
+                            una altura de 200px y una imagen de fondo.
+                            La imagen de fondo está centrada y cubre todo el div.
+                            Propiedades:
+                                - width: Establece el ancho del div al 100% de su contenedor.
+                                - height: Establece la altura del div a 200px.
+                                - background: Establece la imagen de fondo a 'images/header.jpg', la centra y evita que se repita.
+                                - background-size: Asegura que la imagen de fondo cubra todo el div.
+                        */
+        .myDiv {
+            width: 100%;
+            height: 200px;
+            background: url('/images/header.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        /*
+                            Clase: myRow
+                            Descripción: Esta clase estiliza una fila para que tenga un ancho completo
+                            y una altura de 100px.
+                            Propiedades:
+                                - width: Establece el ancho de la fila al 100% de su contenedor.
+                                - height: Establece la altura de la fila a 100px.
+                        */
+        .myRow {
+            width: 100%;
+            height: 100px;
+        }
+        /* Clase para resaltar el texto */
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+}
+
+
+<div class="myDiv bg-primary">
+</div>
+@* <p class="highlight">Este div no utiliza la clase 'container' de Bootstrap</p> *@
+<p class="alert alert-warning">Este div no utiliza la clase 'container' de Bootstrap</p>
+
+
+<hr>
+
+<div class="container">
+    <div class="myDiv bg-primary"></div>
+    <p class="alert alert-warning">Este div si utiliza la clase 'container' de Bootstrap</p>
+</div>
+
+
+<hr>
+
+<div class="container-fluid">
+    <div class="myDiv bg-primary"></div>
+    <p class="alert alert-warning">Este div utiliza la clase 'container-fluid' de Bootstrap</p>
+</div>
+
+<hr>
+
+<div class="container-fluid">
+    <div class="alert alert-danger">
+        <strong>Diferencias:</strong>
+        <ul>
+            <li><span class="badge bg-warning text-dark">Sin 'container':</span> El div ocupa el 100% del ancho del contenedor padre.</li>
+            <li><span class="badge bg-info text-dark">Con 'container':</span> El div tiene un ancho fijo y centrado, con márgenes automáticos.</li>
+            <li><span class="badge bg-success">Con 'container-fluid':</span> El div ocupa el 100% del ancho de la ventana del navegador.</li>
+        </ul>
+    </div>
+</div>
+
+<hr>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="myRow col bg-success"></div>
+        <div class="myRow col bg-warning"></div>
+        <div class="myRow col bg-danger"></div>
+    </div>
+    <div class="row">
+        <div class="myRow col bg-primary"></div>
+        <div class="myRow col bg-info"></div>
+    </div>
+    <div class="row">
+        <p class="alert alert-warning">Este div utiliza filas <span class="badge bg-warning text-dark">row</span>  y columnas <span class="badge bg-warning text-dark">col</span></p>
+    </div>
+</div>

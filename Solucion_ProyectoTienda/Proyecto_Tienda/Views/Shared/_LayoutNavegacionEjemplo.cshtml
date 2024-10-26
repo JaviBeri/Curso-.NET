@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadatos y configuración de la página -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EjemploTiendaProyecto</title>
+    <!-- Enlaces a hojas de estilo -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/EjemploTiendaProyecto.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/animate.css/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    @await RenderSectionAsync("HeadStyles", required: false)
+    <style>
+        /* Estilos personalizados para el encabezado */
+        header.masthead {
+            text-align: center;
+            color: white;
+            background-image: url('/images/header-bg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center center;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#top">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                Menu <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link1">Link1</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link2">Link2</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link3">Link3</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link4">Link4</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link5">Link5</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--
+        Documentación de la sección <nav>
+
+        La sección <nav> define la barra de navegación principal de la página. A continuación se detallan sus componentes:
+
+        1. <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+           - Define una barra de navegación utilizando las clases de Bootstrap para estilizarla.
+           - "navbar-expand-lg": Permite que la barra de navegación se expanda en pantallas grandes.
+           - "navbar-dark": Aplica un tema oscuro a la barra de navegación.
+           - "fixed-top": Fija la barra de navegación en la parte superior de la página.
+
+        2. <div class="container">
+           - Contenedor que centraliza el contenido de la barra de navegación.
+
+        3. <a class="navbar-brand js-scroll-trigger" href="#top">Navbar</a>
+           - Enlace que actúa como la marca de la barra de navegación.
+           - "js-scroll-trigger": Clase personalizada para activar el desplazamiento suave al hacer clic.
+
+        4. <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                Menu <i class="fa fa-bars"></i>
+           </button>
+           - Botón que se muestra en pantallas pequeñas para colapsar/expandir la barra de navegación.
+           - "navbar-toggler": Clase de Bootstrap para el botón de colapso.
+           - "data-bs-toggle", "data-bs-target": Atributos de Bootstrap para controlar el colapso de la barra de navegación.
+           - <i class="fa fa-bars"></i>: Icono de menú utilizando FontAwesome.
+
+        5. <div class="collapse navbar-collapse" id="navbarResponsive">
+           - Contenedor que colapsa/expande el contenido de la barra de navegación en pantallas pequeñas.
+           - "collapse navbar-collapse": Clases de Bootstrap para el comportamiento de colapso.
+           - "id="navbarResponsive"": Identificador único para el contenedor colapsable.
+
+        6. <ul class="navbar-nav text-uppercase ms-auto">
+           - Lista de elementos de navegación.
+           - "navbar-nav": Clase de Bootstrap para la lista de navegación.
+           - "text-uppercase": Clase de Bootstrap para convertir el texto a mayúsculas.
+           - "ms-auto": Clase de Bootstrap para alinear los elementos a la derecha.
+
+        7. <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#link1">Link1</a></li>
+           - Elementos individuales de la lista de navegación.
+           - "nav-item": Clase de Bootstrap para los elementos de la lista.
+           - "nav-link": Clase de Bootstrap para los enlaces de navegación.
+           - "js-scroll-trigger": Clase personalizada para activar el desplazamiento suave al hacer clic.
+           - "href="#link1"": Enlace que apunta a una sección específica de la página.
+    -->
+    <!-- Encabezado principal de la página -->
+    <header class="masthead">
+        <div class="container">
+            <div class="intro-text"></div>
+        </div>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <div class="container-fluid">
+        <main role="main" class="pb-3" style="border: 2px dashed red; padding: 20px; background-color: #f9f9f9;">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - EjemploTiendaProyecto - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <!-- Enlaces a scripts de JavaScript -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+<!--
+    Documentación de _LayoutNavegacionEjemplo.cshtml
+
+    Este archivo define la estructura de la página principal para la aplicación EjemploTiendaProyecto.
+    Incluye los siguientes componentes principales:
+
+    1. Metadatos y enlaces a hojas de estilo en la sección <head>.
+    2. Una barra de navegación fija en la parte superior de la página.
+    3. Un encabezado principal con una imagen de fondo.
+    4. Un contenedor principal para el contenido de la página, con un estilo personalizado.
+    5. Un pie de página con un enlace a la política de privacidad.
+    6. Enlaces a scripts de JavaScript, incluyendo jQuery y Bootstrap.
+
+    Secciones adicionales:
+    - @RenderSectionAsync("HeadStyles", required: false): Permite agregar estilos adicionales en la sección <head>.
+    - @RenderBody(): Renderiza el contenido principal de la página.
+    - @RenderSectionAsync("Scripts", required: false): Permite agregar scripts adicionales al final de la página.
+-->

@@ -1,0 +1,198 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@section HeadStyles {
+    <style>
+        /* Estilos corporativos */
+        .btn-corporate {
+            background-color: #004085; /* Azul corporativo oscuro */
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.125rem;
+            font-weight: 500;
+            border-radius: 5px;
+        }
+
+            .btn-corporate:hover {
+                background-color: #002752; /* Azul más oscuro al pasar el mouse */
+                color: #fff;
+            }
+
+        .btn-success-corporate {
+            background-color: #28a745; /* Verde corporativo */
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.125rem;
+            font-weight: 500;
+            border-radius: 5px;
+        }
+
+            .btn-success-corporate:hover {
+                background-color: #1d7830; /* Verde más oscuro al pasar el mouse */
+                color: #fff;
+            }
+
+        .card-corporate {
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            border: none; /* Quita el borde */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+
+        .card-body {
+            padding: 2rem; /* Espaciado amplio para darle un aire más elegante */
+        }
+
+        /* Ajuste de la imagen para evitar el efecto de tamaño grande */
+        .collapse img {
+            border-radius: 8px;
+            margin-right: 15px;
+            width: 150px;
+            height: auto;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            display: none; /* No muestra la imagen hasta que el colapso está expandido */
+        }
+
+        .collapse.show img {
+            display: block; /* La imagen solo se muestra cuando el colapso está expandido */
+        }
+
+        .card-body p {
+            font-size: 1.125rem;
+            font-weight: 300;
+            color: #333; /* Texto en gris oscuro */
+        }
+
+        .container {
+            max-width: 900px; /* Limita el ancho del contenedor */
+        }
+
+        .hr-corporate {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+}
+
+<div class="container mt-5">
+    <p>
+        <a class="btn btn-corporate" data-bs-toggle="collapse" href="#collapseAnchor" role="button" aria-expanded="false" aria-controls="collapseAnchor">
+            Información del Servicio A
+        </a>
+    </p>
+    <div class="collapse" id="collapseAnchor">
+        <div class="card card-body card-corporate">
+            <p>
+                <img src="/images/service-consulting.jpeg" class="image-fluid float-left clearfix" alt="Consultoría de servicios" />
+                <strong>Descripción:</strong> Nuestros servicios de consultoría están diseñados para optimizar los procesos de negocio y mejorar la eficiencia operativa. Acompañamos a las empresas a encontrar las mejores soluciones tecnológicas para su crecimiento.
+            </p>
+        </div>
+    </div>
+
+    <hr class="hr-corporate">
+
+    <p>
+        <button class="btn btn-success-corporate" type="button" data-bs-toggle="collapse" data-bs-target="#collapseButton" aria-expanded="false" aria-controls="collapseButton">
+            Información del Servicio B
+        </button>
+    </p>
+    <div class="collapse" id="collapseButton">
+        <div class="card card-body card-corporate">
+            <p>
+                <img src="/images/service-cybersecurity.webp" class="image-fluid float-right clearfix" alt="Ciberseguridad" />
+                <strong>Descripción:</strong> Protegemos tus activos digitales con nuestras soluciones avanzadas de ciberseguridad. Garantizamos la seguridad de tus operaciones y datos, evitando amenazas externas y brindando tranquilidad a tu empresa.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card explicativa al final -->
+    <div class="row mt-5 mb-5">
+        <div class="col-12">
+            <div class="card shadow-sm w-100">
+                <div class="card-header bg-light text-dark">
+                    Explicación de los Estilos Aplicados y Funcionalidades del Colapso en Bootstrap 5
+                </div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">Colapsos y Estilos Corporativos</h5>
+                    <p class="card-text">
+                        Este ejemplo utiliza la funcionalidad de colapso de Bootstrap 5 para mostrar y ocultar contenido adicional de una manera elegante y profesional. Los colapsos se activan mediante los botones y enlaces que despliegan tarjetas con contenido detallado sobre los servicios de la empresa.
+                    </p>
+
+                    <h6>Botones de colapso</h6>
+                    <p>
+                        Los botones utilizan las clases <code>data-bs-toggle="collapse"</code> y <code>data-bs-target</code> que son nativas de Bootstrap 5 para controlar el comportamiento de colapso.
+                    </p>
+                    <ul>
+                        <li>**Azul corporativo**: Los botones azules (`btn-corporate`) activan el primer colapso. Este botón se destaca por su color sólido y elegante (`#004085`).</li>
+                        <li>**Verde corporativo**: Los botones verdes (`btn-success-corporate`) activan el segundo colapso, diseñado para mostrar el contenido del servicio de ciberseguridad.</li>
+                    </ul>
+
+                    <h6>Tarjetas (Cards)</h6>
+                    <p>
+                        Las tarjetas (`card-corporate`) tienen bordes redondeados y sombras suaves para crear un efecto tridimensional y elegante. Este enfoque es ideal para entornos corporativos que desean destacar información de manera clara y profesional.
+                    </p>
+                    <ul>
+                        <li>Las imágenes dentro de las tarjetas tienen bordes redondeados y un espaciado a la izquierda o derecha, para evitar solapamientos con el texto y mantener una estética limpia.</li>
+                        <li>El tamaño de las imágenes se ha ajustado para evitar que ocupen demasiado espacio visual y afecten la legibilidad del texto.</li>
+                        <li>Se utiliza <code>display: none</code> para evitar el efecto de tamaño inicial, mostrando la imagen solo cuando el colapso está expandido completamente.</li>
+                    </ul>
+
+                    <h6>Separadores elegantes</h6>
+                    <p>
+                        El separador (`hr-corporate`) entre los colapsos tiene un estilo degradado en lugar de una línea sólida, lo que le da un toque moderno y suave sin ser intrusivo.
+                    </p>
+
+                    <a href="https://getbootstrap.com/docs/5.0/components/collapse/" class="btn btn-primary mt-3">Leer más sobre Collapse en Bootstrap 5</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var collapseElements = document.querySelectorAll('.collapse');
+
+            collapseElements.forEach(function (collapseElement) {
+                collapseElement.addEventListener('shown.bs.collapse', function () {
+                    var img = collapseElement.querySelector('img');
+                    if (img) {
+                        img.style.display = 'block';
+                        setTimeout(function () {
+                            img.style.opacity = '1';
+                        }, 10); // Pequeño retraso para asegurar la transición
+                    }
+                });
+
+                collapseElement.addEventListener('hide.bs.collapse', function () {
+                    var img = collapseElement.querySelector('img');
+                    if (img) {
+                        img.style.opacity = '0';
+                        setTimeout(function () {
+                            img.style.display = 'none';
+                        }, 500); // Tiempo de la transición de opacidad
+                    }
+                });
+
+                // Asegurarse de que la imagen esté oculta inicialmente
+                var img = collapseElement.querySelector('img');
+                if (img) {
+                    img.style.display = 'none';
+                    img.style.opacity = '0';
+                }
+            });
+        });
+    </script>
+
+
+}

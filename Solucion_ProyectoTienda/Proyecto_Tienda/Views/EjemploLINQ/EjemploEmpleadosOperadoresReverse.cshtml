@@ -1,0 +1,121 @@
+﻿@model EmpleadosViewModel
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Lista de Empleados</h2>
+
+    <!-- Filtro en formato de tarjeta -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Filtro de Empleados
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Filtro aplicado:
+            </p>
+            <ul>
+                <li>Empleados cuya edad es menor o igual a 30</li>
+                <li>Las listas se muestran en acordeones: una con el orden original y otra en orden inverso</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Acordeón de empleados -->
+    <div class="accordion" id="empleadosAccordion">
+
+        <!-- Acordeón para la lista en orden original -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOriginal">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOriginal" aria-expanded="true" aria-controls="collapseOriginal">
+                    Orden Original
+                </button>
+            </h2>
+            <div id="collapseOriginal" class="accordion-collapse collapse show" aria-labelledby="headingOriginal" data-bs-parent="#empleadosAccordion">
+                <div class="accordion-body">
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Edad</th>
+                                <th scope="col">Sueldo</th>
+                                <th scope="col">Departamento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (!Model.EmpleadosOriginal.Any())
+                            {
+                                <tr>
+                                    <td colspan="5" class="text-center">No hay empleados disponibles</td>
+                                </tr>
+                            }
+                            else
+                            {
+                                @foreach (var empleado in Model.EmpleadosOriginal)
+                                {
+                                    <tr>
+                                        <td>@empleado.Nombre</td>
+                                        <td>@empleado.Apellido</td>
+                                        <td>@empleado.Edad</td>
+                                        <td>@empleado.Sueldo.ToString("C")</td>
+                                        <td>@empleado.Departamento</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Acordeón para la lista en orden inverso -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingInverso">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInverso" aria-expanded="false" aria-controls="collapseInverso">
+                    Orden Inverso
+                </button>
+            </h2>
+            <div id="collapseInverso" class="accordion-collapse collapse" aria-labelledby="headingInverso" data-bs-parent="#empleadosAccordion">
+                <div class="accordion-body">
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Edad</th>
+                                <th scope="col">Sueldo</th>
+                                <th scope="col">Departamento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (!Model.EmpleadosInvertidos.Any())
+                            {
+                                <tr>
+                                    <td colspan="5" class="text-center">No hay empleados disponibles</td>
+                                </tr>
+                            }
+                            else
+                            {
+                                @foreach (var empleado in Model.EmpleadosInvertidos)
+                                {
+                                    <tr>
+                                        <td>@empleado.Nombre</td>
+                                        <td>@empleado.Apellido</td>
+                                        <td>@empleado.Edad</td>
+                                        <td>@empleado.Sueldo.ToString("C")</td>
+                                        <td>@empleado.Departamento</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Botón para volver -->
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Volver al Inicio</a>
+    </div>
+</div>

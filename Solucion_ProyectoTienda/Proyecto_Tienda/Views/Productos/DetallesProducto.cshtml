@@ -1,0 +1,23 @@
+﻿@model Producto
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h2>Detalles del Producto</h2>
+<div class="card my-4 mx-auto" style="max-width: 600px;">
+    <div class="card-header bg-primary text-white">
+        <h4 class="text-center">Detalles del Producto</h4>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title"><strong>Nombre:</strong> @Model.Nombre</h5>
+        <p class="card-text"><strong>Categoría:</strong> @Model.Categoria</p>
+        <p class="card-text"><strong>Precio:</strong> $@Model.Precio.ToString("0.00")</p>
+        <p class="card-text"><strong>ID del Producto:</strong> @Model.Id</p>
+
+        <div class="text-center mt-4">
+            <a href="/Productos/ListaProductos" class="btn btn-secondary">Volver a la lista de productos</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Ejemplo de Servicios Scoped";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Ejemplo de Servicios Scoped con AddScoped</h2>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            Resultado de las instancias de los servicios scoped
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Se han inyectado dos instancias del servicio scoped dentro de la misma solicitud HTTP.
+            </p>
+            <ul>
+                <li><strong>ID de la primera instancia (servicio1):</strong> @ViewBag.Id1</li>
+                <li><strong>ID de la segunda instancia (servicio2):</strong> @ViewBag.Id2</li>
+            </ul>
+            <p>
+                Como puedes observar, ambos servicios tienen el mismo ID dentro de una misma solicitud HTTP, lo que demuestra que el método <code>AddScoped</code> crea una instancia única por cada solicitud. Si se realizara otra solicitud, se generaría un nuevo ID.
+            </p>
+        </div>
+    </div>
+
+    <!-- Botón para volver al inicio -->
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Volver al Inicio</a>
+    </div>
+</div>

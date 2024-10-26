@@ -1,0 +1,64 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="container">
+    <!-- Título formal y corporativo -->
+    <h3 class="display-4 text-secondary">Encuesta Corporativa</h3>
+
+    <div class="row">
+        <div class="col-sm-9">
+            <!-- Formulario corporativo con campos y preguntas más formales -->
+            <form>
+                <fieldset class="form-group">
+                    <legend>¿Qué tan satisfecho está con nuestros servicios?</legend>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="satisfaction" value="option1">
+                            Muy satisfecho
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="satisfaction" value="option2">
+                            Satisfecho
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="satisfaction" value="option3" checked>
+                            Poco satisfecho
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group mt-4">
+                    <legend>Seleccione sus preferencias de comunicación:</legend>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Deseo recibir actualizaciones por correo electrónico
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            No deseo recibir llamadas telefónicas
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Botón de envío corporativo -->
+                <button class="btn btn-primary mt-4" type="submit">Enviar Respuesta</button>
+            </form>
+        </div>
+
+        <div class="col-sm-3">
+            <!-- Imagen relacionada con el entorno corporativo -->
+            <img src="/images/service-consulting.jpeg" alt="corporate meeting" class="img-fluid rounded">
+        </div>
+    </div> <!-- end row -->
+</div>

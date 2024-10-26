@@ -1,4 +1,6 @@
-﻿namespace Proyecto_Tienda.Services;
+﻿using Proyecto_Tienda.Utilidades;
+
+namespace Proyecto_Tienda.Services;
 
 public class ProductoRepositorioEnMemoriaGenerico : IRepository<Producto>
 {

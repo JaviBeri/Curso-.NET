@@ -11,7 +11,10 @@ namespace Proyecto_Tienda.Controllers
             new Producto(1, "Laptop", "Electrónica", 1200m),
             new Producto(2, "Teléfono", "Electrónica", 800m),
             new Producto(3, "Silla", "Muebles", 150m),
-            new Producto(4, "Mesa", "Muebles", 300m)
+            new Producto(4, "Mesa", "Muebles", 300m),
+            new Producto(5, "iPhone", "Electrónica", 1650m),
+            new Producto(6, "Bolígrafo", "Material Oficina", 22m),
+            new Producto(7, "Lápiz", "Material Oficina", 20m)
         };
 
 
