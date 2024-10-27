@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Ejemplo de Servicios Transitorios";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Ejemplo de Servicios Transitorios con AddTransient</h2>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            Resultado de las instancias de los servicios transitorios
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                Se han inyectado dos instancias diferentes del servicio transitorio.
+            </p>
+            <ul>
+                <li><strong>ID de la primera instancia (servicio1):</strong> @ViewBag.Id1</li>
+                <li><strong>ID de la segunda instancia (servicio2):</strong> @ViewBag.Id2</li>
+            </ul>
+            <p>
+                Como puedes observar, los dos servicios tienen diferentes IDs, lo que demuestra que el método <code>AddTransient</code> crea una nueva instancia cada vez que el servicio es solicitado.
+            </p>
+        </div>
+    </div>
+
+    <!-- Botón para volver al inicio -->
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Volver al Inicio</a>
+    </div>
+</div>
