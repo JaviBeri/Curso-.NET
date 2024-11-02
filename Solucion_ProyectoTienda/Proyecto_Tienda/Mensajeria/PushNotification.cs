@@ -2,9 +2,9 @@
 {
     public class PushNotification : INotificacion
     {
-        public string DispositivoId { get; set; }
-        public string Titulo { get; set; }
-        public string Mensaje { get; set; }
+        public string? DispositivoId { get; set; }
+        public string? Titulo { get; set; }
+        public string? Mensaje { get; set; }
 
         // Implementación del método Enviar de la interfaz INotificacion
         public string Enviar()
